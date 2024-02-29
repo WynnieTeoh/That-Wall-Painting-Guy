@@ -1,0 +1,896 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  position: absolute; /* Position the navbar absolutely relative to its positioned parent */
+  width: 100%; /* Stretch across the full width */
+  top: 0; /* Align to the top */
+  z-index: 10; /* Ensure it's above the banner image */
+  margin-top: 10px;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: right; /* Horizontally center the navigation items */
+  margin: 0;
+  padding: 20px 0;
+  background: none; /* Ensure no background color is applied here */
+  width: auto; /* Adjust based on content size or set to 100% if you want full width */
+  list-style-type: none;
+}
+
+.navbar > ul:last-child {
+  margin-right: 80px;
+}
+
+.navbar ul li {
+  margin: 0 10px; /* Spacing between navigation items */
+  transition: 0.5s;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  color: #000;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 3px;
+}
+
+.navbar ul:hover li a {
+  transform: scale(1.5);
+  opacity: 0.2;
+  filter: blur(5px);
+}
+
+.navbar ul li a:hover {
+  transform: scale(2);
+  opacity: 1;
+  filter: blur(0);
+  text-decoration: none;
+}
+
+.navbar ul li a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f6d248;
+  transition: 0.5s;
+  transform-origin: right;
+  transform: scaleX(0);
+  z-index: -1;
+}
+
+.navbar ul li a:hover:before {
+  transition: transform 0.5s;
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.banner img {
+  width: 100%; /* Make the image fully responsive */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any default margins or padding */
+}
+
+.banner {
+  width: 100%;
+  height: auto;
+  overflow: hidden; /* Prevents any overflow if the image is too large */
+  position: relative;
+}
+
+.header {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  transform: translate(-20%, -20%);
+  font-family: "Playfair Display", sans-serif;
+  font-size: 6rem; /* Adjust size as needed */
+  color: #333; /* Dark gray color */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+}
+
+.header p {
+  position: absolute;
+  top: 100%;
+  left: 1%;
+  transform: translate(-3px, -15px);
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 2rem; /* Adjust size as needed */
+  color: #333; /* Dark gray color */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+}
+
+.button-quote {
+  position: absolute;
+  top: 155%;
+  left: auto;
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #f4a24c, #e86c4f);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem; /* Adjust size as needed */
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  height: 70px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: auto;
+  z-index: 9;
+  border: 0;
+  transition: box-shadow 0.2s;
+}
+
+.button-quote:hover {
+  box-shadow: inset rgba(253, 76, 0, 10) 0 5px 8px;
+}
+
+/* Second page */
+
+.Services h2 {
+  text-align: center;
+  font-family: "Mandali", sans-serif;
+  text-transform: uppercase;
+  font-size: 3em;
+  margin: 20px auto;
+  color: #333;
+  letter-spacing: 3px;
+}
+
+.Services p {
+  text-align: center;
+  font-family: "Mandali", sans-serif;
+  font-size: 0.4em;
+  margin: 8px auto;
+  color: #333;
+  letter-spacing: 3px;
+}
+
+.container {
+  display: grid;
+  max-width: 1500px; /* Maximum width of the grid */
+  margin: auto; /* Centers the grid horizontally if the parent is wider than max-width */
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* Removed grid-template-rows to allow the container's height to adjust based on content */
+  grid-auto-rows: 450px; /* Height for automatically added rows */
+  color: transparent;
+}
+
+.container > div {
+  position: relative;
+  border-radius: 15px; /* Rounded corners for all */
+  overflow: hidden;
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.box {
+  background: linear-gradient(
+    to right,
+    rgba(98, 71, 49, 1),
+    rgba(199, 136, 91, 1)
+  );
+  font-family: "Mandali", sans-serif;
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  width: auto; /* Responsive width */
+  max-height: 100%; /* Maximum width of the box */
+  height: 100%;
+  margin: 0 auto; /* Center the box */
+  padding: 0; /* Padding inside the box */
+}
+.box img {
+  width: 100%;
+  height: auto;
+  transition: all 0.6s ease 0s;
+}
+
+.box:hover img {
+  opacity: 0.3;
+  transform: scale(1.2);
+  transform-origin: left;
+}
+.box-content {
+  color: #fff;
+  width: 85%;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  z-index: 2;
+  transition: all 0.4s ease 0.2s;
+}
+
+.box:hover .box-content {
+  opacity: 1;
+}
+.box .title {
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  margin: 0 0 1px;
+}
+.box .post {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  margin: 20px 0 10px;
+  display: block;
+}
+
+.WhyChooseUs {
+  text-align: center; /* Centers inline or inline-block elements (like img) */
+  position: relative;
+}
+
+.WhyChooseUs img {
+  width: 12%;
+  height: auto;
+  margin: 0 auto; /* Adds automatic margins to the left and right, centering the block */
+  padding-top: 4%;
+  position: relative;
+}
+
+.background-half {
+  position: absolute;
+  top: 22%;
+  left: 0;
+  width: 100%;
+  height: 82%;
+  background: #ebebeb;
+  z-index: -1; /* Ensures the background is behind the SVG */
+}
+
+.WhyChooseUs h4,
+.contactus h2 {
+  text-align: center;
+  font-family: "Mandali", sans-serif;
+  text-transform: uppercase;
+  font-size: 3em;
+  color: #333;
+  letter-spacing: 3px;
+  margin: 0;
+  padding-top: 1%;
+}
+
+.WhyChooseUs p,
+.contactus p {
+  text-align: center;
+  font-family: "Mandali", sans-serif;
+  font-size: 1.3em;
+  color: #333;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.container-whychooseus {
+  display: grid;
+  max-width: 1100px;
+  height: 100%;
+  margin: 2% auto;
+  gap: 30px; /* Adjust the gap if necessary */
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 3px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  /* Remove the min-width and max-width from .card */
+}
+
+.card img {
+  width: 50px;
+  margin-bottom: 8px;
+}
+
+.container-whychooseus .card:first-child img {
+  width: 60px;
+  margin-bottom: 1px;
+}
+
+.container-whychooseus p {
+  color: #666666;
+  margin: 0;
+}
+
+.container-whychooseus .title {
+  text-align: center;
+  font-family: "Mandali", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  margin: 0 auto;
+  color: #333;
+}
+
+.container-whychooseus .post {
+  text-align: center;
+  font-family: "Mandali", sans-serif;
+  font-size: 1em;
+  margin: 5px auto;
+  padding: 0 30px;
+  color: #979797;
+}
+
+.row-portfolio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates a 4-column layout */
+  grid-auto-rows: minmax(0, 35%); /* Sets the minimum row height */
+  gap: 20px; /* Space between the grid items */
+  padding: 0 5%;
+  margin-bottom: -12%;
+}
+
+/* Create four equal columns that sits next to each other */
+.column-portfolio {
+  /* flex: 25%; */
+  width: 100%;
+  overflow: hidden; /* Ensures the image doesn't overflow the div */
+}
+
+.column-portfolio img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Covers the item div, but might crop the image */
+  margin: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.portfolio {
+  text-align: center; /* Centers inline or inline-block elements (like img) */
+  padding: 0 10%;
+  margin-top: 5%;
+  margin-bottom: 1%;
+}
+
+.portfolio h4 {
+  text-align: center;
+  font-family: "Mandali", sans-serif;
+  text-transform: uppercase;
+  font-size: 3em;
+  margin: 0 auto;
+  color: #333;
+  letter-spacing: 3px;
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio p {
+  text-align: center;
+  font-family: "Mandali", sans-serif;
+  font-size: 1.2em;
+  margin: 5px 0;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+/* Style the modal */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 9999; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+  align-items: center; /* Center children vertically */
+  justify-content: center; /* Center children horizontally */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  position: absolute; /* Position it absolutely within the .modal */
+  top: 50%; /* Position the top edge of the image in the middle of the .modal */
+  left: 50%; /* Position the left edge of the image in the middle of the .modal */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Offset the image to the left and up by half its height and width */
+  max-width: 70%; /* Adjust if needed */
+  max-height: 80vh; /* Adjust if needed */
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%; /* Width relative to the parent container */
+  max-width: 700px; /* Maximum width of the caption */
+  text-align: center; /* Center the text within the caption */
+  color: #ccc; /* Light gray text color */
+  padding-bottom: 70px; /* Padding inside the caption, adjust as needed */
+  font-size: 1.5em; /* Larger text size */
+  position: absolute; /* Position it absolutely to place it at the bottom */
+  bottom: 0; /* Align it to the bottom of the parent container */
+  left: 0; /* Align it to the horizontal center of the parent container */
+  right: 0; /* Align it to the horizontal center of the parent container */
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.testimonial-title h4 {
+  text-align: center;
+  font-family: "Mandali", sans-serif;
+  text-transform: uppercase;
+  font-size: 3em;
+  color: #333;
+  letter-spacing: 3px;
+  margin-top: 2%;
+  margin-bottom: 0;
+}
+
+.testimonial-title p {
+  text-align: center;
+  font-family: "Mandali", sans-serif;
+  font-size: 1.2em;
+  margin: 0;
+  padding-top: 5px;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.testimonials-container {
+  padding: 0 40px;
+  margin: 10px auto;
+  position: relative;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers children horizontally in the container */
+  justify-content: center; /* Centers children vertically in the container */
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates a 4-column layout */
+  grid-auto-rows: minmax(0, 100%); /* Sets the minimum row height */
+  gap: 5px; /* Space between the grid items */
+  padding: 0 10%;
+  margin-top: 1%;
+  margin-bottom: 6%;
+  justify-items: center; /* Horizontally center aligns the grid items within their cells */
+  align-items: center; /* Vertically center aligns the grid items within their cells */
+  justify-content: center; /* Horizontally centers the entire grid within the grid container */
+  align-content: center; /* Vertically centers the entire grid within the grid container */
+}
+
+.testimonial {
+  width: 100%;
+  border-radius: 20px;
+  background: linear-gradient(
+    to left bottom,
+    #fabf8f60,
+    #ffc0a660,
+    #ffc4bc60,
+    #ffcbcf60,
+    #f7d3dd60
+  );
+  padding: 20px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.testimonial:after {
+  content: "";
+  display: block; /* reduce the damage in FF3.0 */
+  position: absolute;
+  bottom: -15px;
+  right: 50px;
+  width: 0;
+  border-width: 15px 20px 0;
+  border-style: solid;
+  border-color: #f7d3dd60 transparent;
+}
+
+.testimonial p {
+  font-size: 1.5rem;
+}
+
+.testimonal-author {
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: -60px;
+  right: 0;
+}
+
+.contact-container img {
+  position: absolute;
+  top: 20%;
+  left: 4%;
+  width: 1%;
+  height: auto;
+}
+
+.Fbmessenger {
+  position: absolute;
+  padding-right: 120%;
+  margin-top: 4%;
+}
+
+.Fbmessenger img {
+  width: 5%;
+  height: auto;
+}
+
+.Phone img {
+  width: 0.8%;
+  height: auto;
+}
+
+.Email img {
+  width: 0.43%;
+  height: auto;
+}
+
+.Fbmessenger button {
+  position: absolute;
+  left: 11%;
+  text-align: left;
+  font-family: "Mandali", sans-serif;
+  font-size: 1.5em;
+  margin-top: 0.6%;
+}
+
+.Phone {
+  position: absolute;
+  padding-right: 900%;
+  margin-top: 3.5%;
+}
+
+.Phone button {
+  position: absolute;
+  left: 5.05%;
+  text-align: left;
+  font-family: "Mandali", sans-serif;
+  font-size: 1.5em;
+  margin-top: 0.15%;
+}
+
+.Email {
+  position: absolute;
+  padding-right: 1690%;
+  margin-top: 3.5%;
+}
+
+.Email button {
+  position: absolute;
+  left: 4.6%;
+  text-align: left;
+  font-family: "Mandali", sans-serif;
+  font-size: 1.5em;
+  margin-top: 0.08%;
+}
+
+footer {
+  background-color: #2c3e50; /* Dark background for footer */
+  color: white;
+  padding: 40px 0;
+  font-family: "Arial", sans-serif;
+  margin-top: 15%;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+footer h3 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+footer p {
+  font-size: 1.2em;
+  line-height: 0.5;
+  margin-bottom: 20px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer ul {
+  list-style-type: none; /* Removes default list styling */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
+  display: flex; /* Enables flexbox */
+  justify-content: space-around; /* Distributes space around items */
+  align-items: center; /* Centers items vertically */
+  font-size: 1.2em;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+  margin: 0 20px; /* Adds more space between list items */
+}
+
+@media (max-width: 1280px) {
+  .header {
+    position: absolute;
+    top: 15%;
+    font-size: 4rem;
+  }
+
+  .header p {
+    position: absolute;
+    top: 95%;
+    font-size: 1.5rem; /* Adjust size as needed */
+  }
+
+  .button-quote {
+    font-size: 1.5rem; /* Adjust size as needed */
+    height: 45px;
+  }
+
+  .box-content {
+    color: #fff;
+    width: 85%;
+    opacity: 0;
+    position: absolute;
+    top: 38%; /* Set top to 50% of the parent container */
+    left: 50%; /* Set left to 50% of the parent container */
+    transform: translate(-50%, -50%); /* This will center the element */
+    z-index: 1;
+    transition: all 0.4s ease 0.2s;
+    text-align: center; /* Centers text within the element */
+  }
+  .container {
+    display: grid;
+    max-width: 800px; /* Maximum width of the grid */
+    margin: auto; /* Centers the grid horizontally if the parent is wider than max-width */
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    /* Removed grid-template-rows to allow the container's height to adjust based on content */
+    grid-auto-rows: 500px; /* Height for automatically added rows */
+    color: transparent;
+    position: relative;
+  }
+
+  .container-whychooseus {
+    grid-template-columns: 1fr;
+    padding: 10px 30px;
+    grid-gap: 20px;
+  }
+
+  .background-half {
+    top: 9%;
+    height: 93%;
+  }
+  .portfolio p {
+    margin-bottom: 30px;
+  }
+
+  .Fbmessenger p,
+  .Phone p,
+  .Email p {
+    font-size: 1.2rem;
+  }
+
+  .Fbmessenger img {
+    margin-top: 1%;
+    margin-left: 16%;
+    width: 9.5%;
+  }
+
+  .Phone img {
+    margin-top: 1.97%;
+    margin-left: -1.4%;
+    width: 1.4%;
+  }
+
+  .Email img {
+    margin-top: 2.05%;
+    margin-left: -2.6%;
+    width: 0.71%;
+  }
+
+  .Fbmessenger button {
+    margin-top: 4.3%;
+    left: 32%;
+    font-size: 2rem;
+  }
+  .Phone button {
+    margin-top: 2.4%;
+    left: 4.28%;
+    font-size: 2rem;
+  }
+  .Email button {
+    margin-top: 2.3%;
+    left: 2.29%;
+    font-size: 2rem;
+  }
+  .site-footer .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  footer {
+    margin-top: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar ul li {
+    flex-direction: row; /* Stack the nav items vertically */
+    justify-content: center;
+    align-items: center; /* Center-align the nav items */
+    margin: 2px 0; /* Reduce margin to compact the vertical spacing */
+  }
+
+  .banner img {
+    object-fit: cover;
+    height: 800px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    left: auto;
+    top: auto;
+  }
+  .header {
+    right: 30%;
+    font-size: 5rem; /* Adjust size as needed */
+  }
+  .header p {
+    right: 1%;
+    transform: translate(-1%, -3%);
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-size: 2rem; /* Adjust size as needed */
+  }
+
+  .button-quote {
+    font-size: 2rem; /* Adjust size as needed */
+    height: 70px;
+    top: 150%;
+    left: -1%;
+  }
+
+  .Services {
+    margin: 0;
+    padding: 0 20px;
+  }
+
+  .box-content {
+    color: #fff;
+    width: 85%;
+    opacity: 0;
+    position: absolute;
+    top: 30%; /* Set top to 50% of the parent container */
+    left: 50%; /* Set left to 50% of the parent container */
+    transform: translate(-50%, -50%); /* This will center the element */
+    z-index: 1;
+    transition: all 0.4s ease 0.2s;
+    text-align: center; /* Centers text within the element */
+  }
+
+  .container {
+    display: grid;
+    max-width: 100%; /* Maximum width of the grid */
+    margin: auto; /* Centers the grid horizontally if the parent is wider than max-width */
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    /* Removed grid-template-rows to allow the container's height to adjust based on content */
+    grid-auto-rows: 500px; /* Height for automatically added rows */
+    color: transparent;
+    position: relative;
+  }
+
+  .container-whychooseus {
+    grid-template-columns: 1fr;
+    padding: 10px 30px;
+    grid-gap: 20px;
+  }
+  .background-half {
+    top: 6%;
+    height: 94%;
+  }
+
+  .row-portfolio {
+    margin-bottom: -8%;
+  }
+
+  .portfolio p {
+    margin-bottom: 30px;
+  }
+
+  .Fbmessenger img {
+    margin-top: 1%;
+    margin-left: 18.7%;
+    width: 11.2%;
+  }
+
+  .Phone img {
+    margin-top: 2.1%;
+    margin-left: -1.1%;
+    width: 1.6%;
+  }
+
+  .Email img {
+    margin-top: 2.19%;
+    margin-left: -2.44%;
+    width: 0.8%;
+  }
+
+  .Fbmessenger button {
+    margin-top: 2.9%;
+    left: 38%;
+    font-size: 1rem;
+  }
+  .Phone button {
+    margin-top: 2.38%;
+    left: 5%;
+    font-size: 1rem;
+  }
+  .Email button {
+    margin-top: 2.3%;
+    left: 2.65%;
+    font-size: 1rem;
+  }
+  .site-footer .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  footer {
+    margin-top: 60%;
+  }
+}
