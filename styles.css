@@ -22,7 +22,7 @@ nav {
 }
 
 .navbar > ul:last-child {
-  margin-right: 80px;
+  /* margin-right: 80px; */
 }
 
 .navbar ul li {
@@ -117,6 +117,35 @@ nav {
   position: absolute;
   top: 155%;
   left: auto;
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #f4a24c, #e86c4f);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem; /* Adjust size as needed */
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  height: 70px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: auto;
+  z-index: 9;
+  border: 0;
+  transition: box-shadow 0.2s;
+}
+
+.custom-contact-button {
   background-color: initial;
   background-image: linear-gradient(-180deg, #f4a24c, #e86c4f);
   border-radius: 6px;
@@ -544,71 +573,71 @@ nav {
 }
 
 .contact-container img {
-  position: absolute;
+  /* position: absolute;
   top: 20%;
-  left: 4%;
-  width: 1%;
-  height: auto;
+  left: 4%; */
+  /* width: 1%;
+  height: auto; */
 }
 
 .Fbmessenger {
-  position: absolute;
+  /* position: absolute;
   padding-right: 120%;
-  margin-top: 4%;
+  margin-top: 4%; */
 }
 
 .Fbmessenger img {
-  width: 5%;
+  width: 48px;
   height: auto;
 }
 
 .Phone img {
-  width: 0.8%;
+  width: 48px;
   height: auto;
 }
 
 .Email img {
-  width: 0.43%;
+  width: 48px;
   height: auto;
 }
 
 .Fbmessenger button {
-  position: absolute;
-  left: 11%;
-  text-align: left;
+  /* position: absolute;
+  left: 11%; */
+  /* text-align: left; */
   font-family: "Mandali", sans-serif;
   font-size: 1.5em;
-  margin-top: 0.6%;
+  /* margin-top: 0.6%; */
 }
 
 .Phone {
-  position: absolute;
+  /* position: absolute;
   padding-right: 900%;
-  margin-top: 3.5%;
+  margin-top: 3.5%; */
 }
 
 .Phone button {
-  position: absolute;
-  left: 5.05%;
-  text-align: left;
+  /* position: absolute;
+  left: 5.05%; */
+  /* text-align: left; */
   font-family: "Mandali", sans-serif;
   font-size: 1.5em;
-  margin-top: 0.15%;
+  /* margin-top: 0.15%; */
 }
 
 .Email {
-  position: absolute;
+  /* position: absolute;
   padding-right: 1690%;
-  margin-top: 3.5%;
+  margin-top: 3.5%; */
 }
 
 .Email button {
-  position: absolute;
-  left: 4.6%;
-  text-align: left;
+  /* position: absolute;
+  left: 4.6%; */
+  /* text-align: left; */
   font-family: "Mandali", sans-serif;
   font-size: 1.5em;
-  margin-top: 0.08%;
+  /* margin-top: 0.08%; */
 }
 
 footer {
@@ -728,21 +757,21 @@ footer ul li {
   }
 
   .Fbmessenger img {
-    margin-top: 1%;
+    /* margin-top: 1%;
     margin-left: 16%;
-    width: 9.5%;
+    width: 9.5%; */
   }
 
   .Phone img {
-    margin-top: 1.97%;
+    /* margin-top: 1.97%;
     margin-left: -1.4%;
-    width: 1.4%;
+    width: 1.4%; */
   }
 
   .Email img {
-    margin-top: 2.05%;
+    /* margin-top: 2.05%;
     margin-left: -2.6%;
-    width: 0.71%;
+    width: 0.71%; */
   }
 
   .Fbmessenger button {
@@ -854,21 +883,21 @@ footer ul li {
   }
 
   .Fbmessenger img {
-    margin-top: 1%;
+    /* margin-top: 1%;
     margin-left: 18.7%;
-    width: 11.2%;
+    width: 11.2%; */
   }
 
   .Phone img {
-    margin-top: 2.1%;
+    /* margin-top: 2.1%;
     margin-left: -1.1%;
-    width: 1.6%;
+    width: 1.6%; */
   }
 
   .Email img {
-    margin-top: 2.19%;
+    /* margin-top: 2.19%;
     margin-left: -2.44%;
-    width: 0.8%;
+    width: 0.8%; */
   }
 
   .Fbmessenger button {
@@ -892,5 +921,133 @@ footer ul li {
   }
   footer {
     margin-top: 60%;
+  }
+}
+
+.header > h1 {
+  font-size: 4rem;
+  margin: 0px;
+}
+
+.custom-contact {
+  overflow-x: auto;
+}
+
+.custom-nav-about::after {
+  content: "About Us"; /* Change the text using pseudo-element */
+}
+
+.custom-banner-button {
+  top: 230%;
+}
+
+.custom-service {
+  margin-bottom: 20px;
+}
+
+.custom-service > h2 {
+  margin-bottom: 0px;
+}
+
+.custom-service > p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  .custom-contact {
+    display: block !important;
+  }
+
+  .custom-contact-item > a {
+    justify-content: center;
+  }
+
+  .custom-contact-item > a > button {
+    width: 200px;
+  }
+
+  .custom-nav-about::after {
+    content: "About"; /* Change the text using pseudo-element */
+  }
+
+  .custom-testimonial {
+    overflow-x: auto;
+  }
+
+  footer {
+    margin-top: 40px !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .testimonials {
+    overflow-x: auto;
+  }
+
+  .footer-about > p {
+    line-height: normal;
+  }
+
+  .footer-links > ul {
+    display: block;
+  }
+
+  .header {
+    width: 70%;
+    padding: 40px;
+  }
+
+  .header > h1 {
+    font-size: 50px;
+    margin: 0px;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .header > p {
+    position: unset;
+    font-size: 30px;
+  }
+
+  .button-quote {
+    position: unset;
+    font-size: 1rem;
+  }
+
+  .custom-service {
+    margin-bottom: 40px;
+  }
+
+  .custom-why-choose-us {
+    margin-top: 40px;
+  }
+
+  .custom-why-choose-us > .background-half {
+    top: 3%;
+  }
+
+  .custom-mobile-header {
+    font-size: 40px !important;
+  }
+
+  .custom-mobile-sub-header {
+    font-size: 20px !important;
+  }
+
+  .row-portfolio {
+    margin-bottom: 40px;
+  }
+
+  .custom-testimonial {
+    justify-content: unset;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  footer {
+    margin-top: 40px;
   }
 }
