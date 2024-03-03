@@ -17,7 +17,7 @@
     <nav class="navbar">
       <ul>
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">About us</a></li>
+        <li><a href="#about" class="custom-nav-about"></a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -25,26 +25,22 @@
 
     <div class="banner" id="home">
       <img src="Assets/Guy-painting-wall.png" alt="Guy painting wall" />
-      <h1 class="header">
-        <span>That Wall</span>
-        <span>Painting Guy</span>
-        <span
-          ><p>
-            Experience hassle-free painting services tailored to your needs and
-            preferences.
-          </p></span
-        >
-        <button class="button-quote" role="quote">
+      <div class="header">
+        <h1>That Wall</h1>
+        <h1>Painting Guy</h1>
+        <p>
+          Experience hassle-free painting services tailored to your needs and
+          preferences.
+        </p>
+        <button class="button-quote custom-banner-button" role="quote">
           <strong>Get free quote now</strong>
         </button>
-      </h1>
+      </div>
     </div>
 
-    <div class="Services" id="services">
-      <h2>
-        Our Services
-        <p>Professional Painting Services for Every Need</p>
-      </h2>
+    <div class="Services custom-service" id="services">
+      <h2 class="custom-mobile-header">Our Services</h2>
+      <p class="custom-mobile-sub-header">Professional Painting Services for Every Need</p>
     </div>
     <div class="container">
       <div class="row">
@@ -107,12 +103,12 @@
       </div>
     </div>
 
-    <div class="WhyChooseUs" id="about">
+    <div class="WhyChooseUs custom-why-choose-us" id="about">
       <div class="background-half"></div>
       <img src="Assets/painter-worker-01.svg" alt="Painter Wall" />
 
-      <h4>Why Choose Us</h4>
-      <p>Unmatched Quality and Dedication</p>
+      <h4 class="custom-mobile-header">Why Choose Us</h4>
+      <p class="custom-mobile-sub-header">Unmatched Quality and Dedication</p>
 
       <div class="container-whychooseus">
         <div class="card">
@@ -148,8 +144,8 @@
 
     <div class="portfolio">
       <title>Portfolio</title>
-      <h4>See Our Work</h4>
-      <p>
+      <h4 class="custom-mobile-header">See Our Work</h4>
+      <p class="custom-mobile-sub-header">
         Discover the difference we can make. Browse our portfolio to see
         examples of our craftsmanship, versatility, and the transformations
         we've achieved for our satisfied clients.
@@ -215,11 +211,11 @@
 
     <div class="testimonial-title">
       <title>Testimonials</title>
-      <h4>Hear From Our Happy Customers</h4>
-      <p>Nothing speaks louder than the praise of our clients.</p>
+      <h4 class="custom-mobile-header">Hear From Our Happy Customers</h4>
+      <p class="custom-mobile-sub-header">Nothing speaks louder than the praise of our clients.</p>
     </div>
 
-    <div class="testimonials">
+    <div class="testimonials custom-testimonial">
       <section class="testimonials-container">
         <div class="testimonial">
           <p>
@@ -254,32 +250,33 @@
       <p>Get in Touch for Your Painting Needs</p>
     </div>
 
-    <div class="contact-container">
-      <div class="Fbmessenger">
-        <a href="http://m.me/PAGE-NAME" target="_blank"
-          ><img src="Assets/FB Messenger.svg.png" />
-          <button class="button-quote" role="quote">FB Messenger</button
-        >
+    <div class="contact-container custom-contact" style="display: flex; justify-content: center; align-items: center; margin-top: 40px;">
+      <div class="Fbmessenger custom-contact-item">
+        <a href="http://m.me/PAGE-NAME" target="_blank" style="color: transparent; display: flex; align-items: center;"
+          ><img src="Assets/FB Messenger.svg.png" style="margin-right: 20px; width: 48px;" />
+          <button class="custom-contact-button" role="quote">FB Messenger</button
+        ></a>
       </div>
-      <div class="Phone">
-        <a href="tel:+61451066880" target="_blank"
-          ><img src="Assets/telephone-call.svg" />
-          <button class="button-quote" role="quote">Mobile Phone</button
-            >
+      <div class="Phone custom-contact-item">
+        <a href="tel:+61451066880" target="_blank" style="color: transparent; display: flex; align-items: center; margin: 0 20px;"
+          ><img src="Assets/telephone-call.svg" style="margin-right: 20px; width: 48px;" />
+          <button class="custom-contact-button" role="quote">Mobile Phone</button
+            ></a>
+
       </div>
-      <div class="Email">
-        <a href="mailto:jonniehuang@hotmail.com" target="_blank"
-          ><img src="Assets/email.svg" />
-          <button class="button-quote" role="quote">Send Email</button
-            >
+      <div class="Email custom-contact-item">
+        <a href="mailto:jonniehuang@hotmail.com" target="_blank" style="color: transparent; display: flex; align-items: center;"
+          ><img src="Assets/email.svg" style="margin-right: 20px; width: 48px;" />
+          <button class="custom-contact-button" role="quote">Send Email</button
+            ></a>
       </div>
     </div>
 
     <footer class="site-footer">
       <div class="container">
         <div class="footer-about">
-          <h3>The Wall Painting Guy</h3>
-          <p>Brighten Your World with Expertly Painted Walls</p>
+          <h3 style="color: #fff;">The Wall Painting Guy</h3>
+          <p style="color: #fff;">Brighten Your World with Expertly Painted Walls</p>
         </div>
         <div class="footer-links">
           <ul>
